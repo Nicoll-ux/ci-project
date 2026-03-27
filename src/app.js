@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 let tasks = [];
+app.get('/', (req, res) => {
+    res.send('API funcionando correctamente');
+  });
 app.get('/tasks', (req, res) =>  {
     res.json(tasks);
 });
